@@ -1,13 +1,13 @@
-package com.desafio.modulo_b_gateway;
+package com.desafio.modulo_b_processor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ModuloBGatewayApplication {
+public class ModuloBProcessorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ModuloBGatewayApplication.class, args);
+		SpringApplication.run(ModuloBProcessorApplication.class, args);
 	}
 
 }

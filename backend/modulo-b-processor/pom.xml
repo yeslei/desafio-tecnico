@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.desafio</groupId>
-	<artifactId>modulo-b-gateway</artifactId>
+	<artifactId>modulo-b-processor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>modulo-b-gateway</name>
+	<name>modulo-b-processor</name>
 	<description>Modulo B: Entrega e Processamento</description>
 	<url/>
 	<licenses>

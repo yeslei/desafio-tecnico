@@ -50,9 +50,6 @@ public class StringPosicionalConversor {
         pedido.setQuantidade(quantidade);
         pedido.setBebida(bebida);
 
-        pedido.setStatus(Status.RECEBIDO);
-        pedido.setValor(BigDecimal.ZERO);
-
         return pedido;
     }
 }

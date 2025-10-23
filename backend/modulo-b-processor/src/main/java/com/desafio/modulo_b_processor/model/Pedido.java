@@ -9,11 +9,6 @@ import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
-enum Status {
-    RECEBIDO,
-    ENTREGUE
-}
-
 @Entity
 @Table(name = "pedidos")
 @Getter

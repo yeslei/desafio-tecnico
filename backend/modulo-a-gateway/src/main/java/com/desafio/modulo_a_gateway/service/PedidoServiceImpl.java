@@ -11,15 +11,18 @@ public class PedidoServiceImpl implements PedidoService {
     private final PedidoRepository pedidoRepository;
     private final StringPosicionalConversor conversor;
     private final CalculoValorService calculador;
+    private final RabbitMQPublisher publisher;
 
     public PedidoServiceImpl(
             PedidoRepository pedidoRepository,
             StringPosicionalConversor conversor,
-            CalculoValorService calculador
+            CalculoValorService calculador,
+            RabbitMQPublisher publisher
     ) {
         this.pedidoRepository = pedidoRepository;
         this.conversor = conversor;
         this.calculador = calculador;
+        this.publisher = publisher;
     }
 
     @Override
@@ -31,7 +34,7 @@ public class PedidoServiceImpl implements PedidoService {
 
         Pedido salvo = pedidoRepository.save(pedido);
 
-        // 5. Publicar Mensagem na Fila
+        publisher.publicarPedidoRecebido(salvo.getId());
 
         return salvo;
     }
